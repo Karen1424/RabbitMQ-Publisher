@@ -4,8 +4,6 @@ using System.Text;
 
 class Send
 {
-    
-    
         
     public static void Main()
     {
@@ -19,7 +17,7 @@ class Send
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
-            int messageIndex = 1;
+            int message_index = 1;
             var index = 100;
             var lenght = 100;
             while(index != 0)

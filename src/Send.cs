@@ -5,7 +5,7 @@ using System.Text;
 class Send
 {
     
-    public static bool k = true;
+    
         
     public static void Main()
     {
@@ -37,16 +37,16 @@ class Send
                     str_build.Append(letter);  
                 }
                 var message = str_build.ToString();
-                var body = Encoding.UTF8.GetBytes(message + " " + messageIndex); 
+                var body = Encoding.UTF8.GetBytes(message + " " + message_index); 
             
                 channel.BasicPublish(exchange: "",
                                      routingKey: "hello",
                                      basicProperties: null,
                                      body: body);
             
-                Console.WriteLine(" [x] Sent {0}", message + " " + messageIndex);
+                Console.WriteLine(" [x] Sent {0}", message + " " + message_index);
                 --index;
-                ++messageIndex;
+                ++message_index;
             }
         }
 
